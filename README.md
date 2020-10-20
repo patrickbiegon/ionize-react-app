@@ -30,6 +30,10 @@ npx cap add electron
 
 Spin up Nginx server and server the files!
 
+This you can do easily using _Docker_ - see build/www folder for the Dockerfile
+
+Make sure that both _docker_ and _docker-compose_ are available in the machine.
+
 To build a Docker Image, you have to run the following command in our terminal:
  ```
 docker build -f build/droid/Dockerfile -t myApp:v1 
@@ -38,6 +42,11 @@ To run the built docker image, use the following command:
  ```
 docker run -d -p 127.0.0.1:3000:3000/tcp --name myAppContainer --network host myApp:v1 
  ```
+You can also build and run your containers using the docker-compose at root 
+ ```
+docker run -d -p 127.0.0.1:3000:3000/tcp --name myAppContainer --network host myApp:v1 
+ ```
+ 
 ### Android
 
 ## features
