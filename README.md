@@ -1,6 +1,6 @@
 # Ionize your reactJs app to run across platforms i.e web, ios, android, pwa,electron 
 
-The steps to convert your reactJs app into Ionoic app and deploy across many platforms.
+The steps to convert your reactJs app into Ionic app and deploy across many platforms.
 
 ## Prepare your app - add Ionic and Capacitor!
 The assumption here is that you have reactjs app that you need to ionize!
