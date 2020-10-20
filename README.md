@@ -2,17 +2,11 @@
 
 This simple React Ionic app that implement social login - facebook and google.
 
-## Steps to run the react app
-1. clone repo.
-2. use npm or yarn to install packages.
-3. add env details for firebase.
-4. run app `yarn start`
-
 ## Prepare your app
 npm install -g @ionic/cli
 
 ionic start platformPoc blank --type=react
-cd platformPoc
+cd myApp
 
 ionic integrations enable capacitor
 ionic cap add android
@@ -33,7 +27,7 @@ Spin up Nginx server and server the files!
 
 To build a Docker Image, you have to run the following command in our terminal:
 
-docker build -f devDockerfile.web -t myApp:v1 
+docker build -f build/droid/Dockerfile -t myApp:v1 
 
 To run the built docker image, use the following command:
 
