@@ -5,13 +5,13 @@ import "firebase/auth";
 dotenv.config()
 
  var firebaseConfig = {
-     apiKey: "AIzaSyDGNhtuNrydyVIXjmdHkYKmxJH_maDJt9E",
-     authDomain: "social-pwa-login.firebaseapp.com",
-     databaseURL: "https://social-pwa-login.firebaseio.com",
-     projectId: "social-pwa-login",
-     storageBucket: "social-pwa-login.appspot.com",
-     messagingSenderId: "357723739362",
-     appId: "1:357723739362:web:f7415caf7c4f606be1fabb"
+     apiKey: "youkeyhere",
+     authDomain: "yourdomainhere.firebaseapp.com",
+     databaseURL: "yourdomainhere.firebaseio.com",
+     projectId: "your-project-id",
+     storageBucket: "yourbuckehere.appspot.com",
+     messagingSenderId: "messagingSenderIdhere",
+     appId: "appIdhere"
  };
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);
