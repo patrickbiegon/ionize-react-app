@@ -44,7 +44,7 @@ docker run -d -p 127.0.0.1:3000:3000/tcp --name myAppContainer --network host my
  ```
 You can also build and run your containers using the docker-compose at root 
  ```
-docker run -d -p 127.0.0.1:3000:3000/tcp --name myAppContainer --network host myApp:v1 
+docker-compose build && docker-compose up
  ```
  
 ### Android
