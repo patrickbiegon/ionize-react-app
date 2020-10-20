@@ -2,7 +2,7 @@
 
 The steps to convert your reactJs app into Ionoic app and deploy across many platforms.
 
-## Prepare your app
+## Prepare your app - add Ionic and Capacitor!
 The assumption here is that you have reactjs app that you need to ionize!
 
 The app used here as an example, is a simple React Ionic app that implement social login - facebook and google - using firebase and the objective is to
