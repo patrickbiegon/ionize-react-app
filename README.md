@@ -7,10 +7,16 @@ The assumption here is that you have reactjs app that you need to ionize!
 
 The app used here as an example, is a simple React Ionic app that implement social login - facebook and google - using firebase and the objective is to
 deploy it on web, android, ios, pwa and electron.
+
+Run these commands from outside your reactJs app directory.
  ```
 npm install -g @ionic/cli
 
 ionic start myApp blank --type=react
+
+ ``` 
+ Now enter into you reactJs app directory - enable Capacitor.
+ ```
 cd myApp
 
 ionic integrations enable capacitor
