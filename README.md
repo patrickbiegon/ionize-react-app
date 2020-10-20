@@ -24,7 +24,7 @@ npx cap add ios
 npx cap add electron
  ```
 
-## How to build for various platform##
+## How to build for various platform
 
 ### Web
 
