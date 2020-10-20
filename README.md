@@ -3,9 +3,9 @@
 The steps to convert your reactJs app into Ionoic app and deploy across many platforms.
 
 ## Prepare your app
-The assumption here is that you have reactjs app (myApp) that you need to ionize!
+The assumption here is that you have reactjs app that you need to ionize!
 
-The app used here is a simple React Ionic app that implement social login - facebook and google - using firebase and objective is to
+The app used here is a simple React Ionic app that implement social login - facebook and google - using firebase and the objective is to
 deploy it on web, android, ios, pwa and electron.
  ```
 npm install -g @ionic/cli
