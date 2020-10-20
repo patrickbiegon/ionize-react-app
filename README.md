@@ -34,7 +34,7 @@ npx cap add electron
 
 ### Web
 
-Spin up Nginx server and server the files!
+Spin up Nginx server and serve the files to WWW! That simple. 
 
 This you can do easily using _Docker_ - see build/www folder for the Dockerfile
 
