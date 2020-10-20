@@ -1,6 +1,6 @@
-# SheTrades Single Codebase Proof of Concept
+# Single Codebase using IONIC to build web, mobile, pwa and electron application
 
-This proof of concept app with social login - one first feature phase 2 requires.
+This simple React Ionic app that implement social login - facebook and google.
 
 ## Steps to run the react app
 1. clone repo.
@@ -8,7 +8,7 @@ This proof of concept app with social login - one first feature phase 2 requires
 3. add env details for firebase.
 4. run app `yarn start`
 
-##prepare your app
+## Prepare your app
 npm install -g @ionic/cli
 
 ionic start platformPoc blank --type=react
@@ -18,14 +18,20 @@ ionic integrations enable capacitor
 ionic cap add android
 ionic cap open android
 
+#capactior -
+npx cap add android
+npx cap add ios
 
-## HOW TO BUILD  ##
+npx cap add electron
+
+
+## How to build  ##
 
 ### Web
 
-Spin up Nginx server and server the files
+Spin up Nginx server and server the files!
 
-To build a Docker Image, we have to run the following command in our terminal:
+To build a Docker Image, you have to run the following command in our terminal:
 
 docker build -f devDockerfile.web -t myApp:v1 
 
