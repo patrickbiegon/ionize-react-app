@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 WORKDIR /
 
 ADD ./*.sh /
-ADD ./platformPoc/app /app
+ADD ./myApp/app /app
 
 RUN set -x \
 && apt update \
