@@ -1,0 +1,7 @@
+{
+  "name": "platfomPoc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

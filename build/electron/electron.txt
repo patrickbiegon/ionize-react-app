@@ -1,0 +1,53 @@
+#Node image specification
+FROM node: 12.14.0-alpine3.11
+
+# Setting the mount point of the working folder
+VOLUME ["/ home / worker"]
+
+# Execution command settings
+ENTRYPOINT ["/ bin / sh", "--login"]
+
+# Setting shell environment variables
+RUN echo << EOF> ~ / .profile \
+    Change host address when #ionic serve
+    export IONIC_CMDOPTS_SERVE_ADDRESS = 0.0.0.0 \
+    # Suppress browser startup during ionic serve
+    export IONIC_CMDOPTS_SERVE_OPEN = 0 \
+    EOF
+
+#Public port settings
+# 4200: ng e2e
+# 8100: ionic serve
+# 9876: ng test
+# 35729: liveload
+# 53703: dev logger
+EXPOSE 4200 8100 9876 35729 53703
+
+# C ++, Python settings
+#Adopt the same as the base image
+# https://github.com/nodejs/docker-node/blob/f8c22aeb318ec3df876f8271b9b8a86005f0f53d/10/alpine/Dockerfile
+RUN apk add --no-cache \
+    g ++ \
+    make \
+    python
+
+#Capacitor Version specification
+ENV Version Capacitor = 1.4.0
+
+#Cordova version specification
+ENV Version Cordova = 9.0.0
+
+#Cordova Res Version specification
+ENV Version CordovaRes = 0.8.1
+
+#Specify Ionic CLI version
+ENV Version Ionic = 5.4.13
+
+#Node package settings
+RUN yarn global add @capacitor / cli @ $ {VersionCapacitor} cordova @ $ {VersionCordova} cordova-res @ $ {VersionCordovaRes} ionic @ $ {VersionIonic} --exact \
+    ## Make Yarn usage the default for Ionic
+    && ionic config set -g yarn true \
+    && ionic config set -g npmClient yarn
+
+#Change to working folder
+WORKDIR / home / worker

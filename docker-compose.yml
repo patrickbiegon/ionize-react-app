@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+    app-web:
+        container_name: ionic-web-builder
+        build:
+            context: .
+            dockerfile: build/www/Dockerfile
+        network_mode: "host"
+
+    app-droid:
+        container_name: ionic-android-builder
+        build:
+            context: .
+            dockerfile: build/droid/Dockerfile
+        network_mode: "host"
+        volumes:
+            -  ./tools/apk:/home/gradle/final-apk
+            -  ~/.gradle:/home/gradle/.gradle
+    #  app-ios:
+    #             container_name: ionic-android-builder
+    #             build:
+    #                 context: .
+    #                 dockerfile: ./Dockerfile
+    #             volumes:
+    #                 -  ./tools/apk:/home/gradle/final-apk
+    #                 -  ~/.gradle:/home/gradle/.gradle
+    #  app-electron:
+    #         container_name: ionic-android-builder
+    #         build:
+    #             context: .
+    #             dockerfile: ./Dockerfile
+    #         volumes:
+    #             -  ./tools/apk:/home/gradle/final-apk
+    #             -  ~/.gradle:/home/gradle/.gradle
