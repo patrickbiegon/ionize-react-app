@@ -1,4 +1,4 @@
-# Ionize your reactJs app to run on acrross platforms i.e web, ios, android, pwa,electron 
+# Ionize your reactJs app to run on across platforms i.e web, ios, android, pwa,electron 
 
 The steps to convert your reactJs app into Ionoic app and deploy across many platforms.
 
