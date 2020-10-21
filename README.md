@@ -130,7 +130,7 @@ There are 2 options to build the app in Android: one automatic and another manua
       ```
  ## iOS
  
-To create the iOS binary, there is only a way (manual) because it couldn't be dockerized.
+To create the iOS binary, there is only a way now (manually) because it couldn't be dockerized.
  * **Binary creation**
     * Requirements
       * XCode (App Store, or beta if on beta MacOS)
