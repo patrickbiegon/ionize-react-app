@@ -1,16 +1,24 @@
-# Ionize your reactJs app to run on acrross platforms i.e web, ios, android, pwa,electron 
+# Ionize your reactJs app to run across platforms i.e web, ios, android, pwa,electron 
 
-The steps to convert your reactJs app into Ionoic app and deploy across many platforms.
+The steps to convert your reactJs app into Ionic app and deploy across many platforms.
 
-## Prepare your app
-The assumption here is that you have reactjs app (myApp) that you need to ionize!
+## Prepare your app - add Ionic and Capacitor!
+The assumption here is that you have reactjs app that you need to ionize!
 
-The app used here is a simple React Ionic app that implement social login - facebook and google - using firebase and objective is to
+The app used here as an example, is a simple React Ionic app that implement social login - facebook and google - using firebase and the objective is to
 deploy it on web, android, ios, pwa and electron.
+
+Run these commands from outside your reactJs app directory (in this example myApp).
+These command will convert your reactJs into a working Ionic app
+It installs dependencies for you and sets up your project ready to be deployed.
  ```
 npm install -g @ionic/cli
 
 ionic start myApp blank --type=react
+
+ ``` 
+ Now enter into you reactJs app directory - enable **Capacitor**. Capacitor generates cross-platform apps for us and there in lies the magic.
+ ```
 cd myApp
 
 ionic integrations enable capacitor
@@ -24,11 +32,15 @@ npx cap add ios
 npx cap add electron
  ```
 
-## How to build for various platform##
+## How to build and deploy for various platform
 
 ### Web
 
-Spin up Nginx server and server the files!
+Spin up Nginx server and serve the files to WWW! That simple. 
+
+This you can do easily using _Docker_ - see build/www folder for the Dockerfile
+
+Make sure that both _docker_ and _docker-compose_ are available in the machine.
 
 To build a Docker Image, you have to run the following command in our terminal:
  ```
@@ -38,6 +50,11 @@ To run the built docker image, use the following command:
  ```
 docker run -d -p 127.0.0.1:3000:3000/tcp --name myAppContainer --network host myApp:v1 
  ```
+You can also build and run your containers using the docker-compose at root 
+ ```
+docker-compose build && docker-compose up
+ ```
+ 
 ### Android
 
 ## features
@@ -113,7 +130,7 @@ There are 2 options to build the app in Android: one automatic and another manua
       ```
  ## iOS
  
-To create the iOS binary, there is only a way (manual) because it couldn't be dockerized.
+To create the iOS binary, there is only a way now (manually) because it couldn't be dockerized.
  * **Binary creation**
     * Requirements
       * XCode (App Store, or beta if on beta MacOS)
