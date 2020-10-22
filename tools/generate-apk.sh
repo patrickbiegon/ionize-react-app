@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_NAME=geteduroam
+PROJECT_NAME=myApp
 
 # Create Gradle folder (if not exists)
 if [ ! -d ~/.gradle ]; then
