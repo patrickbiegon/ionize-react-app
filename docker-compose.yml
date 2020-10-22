@@ -6,16 +6,20 @@ services:
             context: .
             dockerfile: build/www/Dockerfile
         network_mode: "host"
+        ports: 
+            - "127.0.0.1:80:80" #if running local
+            #- "80:80" 
 
-    app-droid:
-        container_name: ionic-android-builder
-        build:
-            context: .
-            dockerfile: build/droid/Dockerfile
-        network_mode: "host"
-        volumes:
-            -  ./tools/apk:/home/gradle/final-apk
-            -  ~/.gradle:/home/gradle/.gradle
+    # app-droid:
+    #     container_name: ionic-android-builder
+    #     build:
+    #         context: .
+    #         dockerfile: build/droid/Dockerfile
+    #     network_mode: "host"
+    #     volumes:
+    #         -  C:\Repositories\plaform-ionic-poc\release\apk:/home/gradle/final-apk
+    #         -  C:\Repositories\plaform-ionic-poc\build\droid\myApp:/home/gradle/myApp
+    #         -  C:\Users\pbiegon\.gradle:/home/gradle/.gradle
     #  app-ios:
     #             container_name: ionic-android-builder
     #             build:

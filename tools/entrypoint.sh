@@ -15,7 +15,6 @@ echo "npm rebuild node-sass"
 npm rebuild node-sass
 
 
-
 ##Check if android folder already exists to delete it NO LONGER NEEDED!!!
 #if [ -d "/home/gradle/myApp/android" ]; then
 #    echo "Removing android dir"
@@ -28,11 +27,6 @@ mv android android_bk
 npm install --save @capacitor/core @capacitor/cli
 
 #build wifi-eap-configurator plugin
-cd plugins/wifi-eap-configurator
-npm install
-
-cd ../..
-npm install ./plugins/wifi-eap-configurator --save
 
 # Build the application
 echo "npm run build"
@@ -69,9 +63,9 @@ $ANDROID_HOME/build-tools/${ANDROID_SDK_VERSION}/zipalign -v -p 4 app-debug.apk 
 #Sign the APK
 #TODO take password as parameter
 echo "Signing the APK"
-$ANDROID_HOME/build-tools/${ANDROID_SDK_VERSION}/apksigner sign --ks /release-key.jks --ks-pass pass:${PASS_PHRASE} --key-pass pass:${PASS_PHRASE} --out geteduroam.apk app-debug-aligned.apk
+$ANDROID_HOME/build-tools/${ANDROID_SDK_VERSION}/apksigner sign --ks /release-key.jks --ks-pass pass:${PASS_PHRASE} --key-pass pass:${PASS_PHRASE} --out myApp.apk app-debug-aligned.apk
 
-cp geteduroam.apk /home/gradle/final-apk/
+cp myApp.apk /home/gradle/final-apk/
 
 
 

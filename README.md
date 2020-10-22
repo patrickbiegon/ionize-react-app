@@ -137,7 +137,7 @@ To create the iOS binary, there is only a way now (manually) because it couldn't
       * Commandline tools from XCode (`sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer`)
       * Node.js (LTS from https://nodejs.org/en/)
       * CocoaPods (`sudo gem install cocoapods`)
-    * Navigate to __src__ folder
+    * Navigate to __myApp__ folder
       * Install Dependencies and build (nodeJS dependencies)
       ```
       npm i

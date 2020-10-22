@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1038510168434",
+    "firebase_url": "https://platform-c3666.firebaseio.com",
+    "project_id": "platform-c3666",
+    "storage_bucket": "platform-c3666.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038510168434:android:51c7ff004ea3dfac81e5eb",
+        "android_client_info": {
+          "package_name": "com.shetrades.poc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038510168434-cdt0scuutt2cuvoiee8pftih0sj856ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2RAuEN67NlUXsBIpdSLRe2wt2Q0TpN94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038510168434-cdt0scuutt2cuvoiee8pftih0sj856ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
